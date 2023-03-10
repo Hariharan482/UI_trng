@@ -23,21 +23,24 @@ header{
     font-weight: 700;
 }
 .left-container{
-   
     float: left;
     width: 61.1%;
+    
+}    
+.left-containers{
     margin-bottom: 20px;
     border: solid rgb(45 , 94, 144);
     background-color: rgb(246, 246, 246);
-}    
+}
 .right-container{
     float: right;
     width: 37.35%;
+}
+.right-containers{
     margin-bottom: 25px;
     border: 1px solid rgb(45 , 94, 144);
     background-color: rgb(246, 246, 246);
 }
-
 .innerdiv1 { 
     width: 100%;
     box-sizing: border-box;
