@@ -58,18 +58,19 @@ let month=date.getMonth()+1;
 console.log(date.getDate()+"/"+ month+"/"+date.getFullYear());
 
 //celsius to fahrenheit conversion
-((celsius)=>{
-    console.log(celsius*(9/5)+32+" F");
-})(32);
+var celsiusToFahrenheit=(celsius)=>{
+    return celsius*(9/5)+32+" F";
+}
+console.log(celsiusToFahrenheit(32));
 
 //find avg 
-avg=(arr)=>{
+var avg=(arr)=>{
     return arr.reduce((prev,curr)=>prev+=curr)/arr.length;
 }
 console.log(avg([1,2,3,4,5]));
 
 //reverse a string
-reverseStr=(str)=>{
+var reverseStr=(str)=>{
     return str.split('').reverse().join("");
 }
 console.log(reverseStr("Hello"));
