@@ -11,53 +11,65 @@ console.log(2=="2")
 
 //section 2
 
-team=['Kevin','Haaland','Foden','Ruben','Ilkay','Mahrez','Stones','Alvarez','Walker','Silva','Rodri'];
+//initialising array
+var team=['Kevin','Haaland','Foden','Ruben','Ilkay','Mahrez','Stones','Alvarez','Walker','Silva','Rodri'];
 // var j=0;
 // for(let i=11;i>=1;i--){
 //     team[j++]=`player${i}`;
 // }
 console.log(team);
 
+//removing an element from an array
 team.shift();
 console.log(team);
 
+// length of an array
 console.log("no of players : "+team.length);
 
+//adding element in a array
 team.unshift("Laporte");
 console.log(team);
 
+//sort funct
 console.log("sorted player list : "+team.sort())
 
+//random funct
 console.log("Player - Shirt No")
-for(player of team){
+for(let player of team){
     console.log(player+" - "+Math.floor(Math.random()*99));
 }
 
-var updteam=team.map( player => player.toUpperCase() );
-console.log(updteam);
+//case conversion
+var updatedTeam=team.map( player => player.toUpperCase() );
+console.log(updatedTeam);
 
 //section 3
 
+//print 0 to 100
 (()=>{
     for(let i=0;i<=100;i++){
         console.log(i);
     }
 })();
 
-date=new Date();
-month=date.getMonth()+1;
+//display date
+let date=new Date();
+let month=date.getMonth()+1;
 console.log(date.getDate()+"/"+ month+"/"+date.getFullYear());
 
-((cel)=>{
-    console.log(cel*(9/5)+32+" F");
+//celsius to fahrenheit conversion
+((celsius)=>{
+    console.log(celsius*(9/5)+32+" F");
 })(32);
 
+//find avg 
 avg=(arr)=>{
     return arr.reduce((prev,curr)=>prev+=curr)/arr.length;
 }
 console.log(avg([1,2,3,4,5]));
 
-revstr=(str)=>{
+//reverse a string
+reverseStr=(str)=>{
     return str.split('').reverse().join("");
 }
-console.log(revstr("Hello"));
+console.log(reverseStr("Hello"));
