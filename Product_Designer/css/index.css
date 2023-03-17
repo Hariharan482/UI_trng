@@ -5,17 +5,19 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 body{
-    margin: auto;
     background-color: black;
     color: white;
     text-align: center;
+    padding: 0 10.5%;
+}
+header{
+    display: flex;
+    flex-direction: column;
 }
 img{
     max-width: 100%;
 }
 .mail{
-    width: 79%;
-    margin: 0 auto;
     margin-top: 65px;
     text-align: end;
     font-size: 25px;
@@ -29,44 +31,35 @@ img{
 .first-name{
     font-weight: 300;
 }
-.position{
+.job-position{
     font-weight: 700;
     font-size: 50px;
     letter-spacing: 2px;
     color: rgb(206, 206, 206);
 }
-.hid-mail{
-    width: 79%;
-    display: none;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 25px;
-}
 .piclist,.logolist{
-    width: 79%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 .piclist{
-    margin-top: 150px;
+    margin-top: 130px;
 }
 .pic{
-    width: 32%;
-    padding-bottom: 30px;
+    width: 30%;
+    margin: 20px;
 }
 .descrptn{
     color: rgb(206, 206, 206);
-    margin-top: 110px;
+    margin-top: 120px;
     margin-bottom: 80px;
     font-size: 50px;
     font-weight: 700;
 }
 .logolist{
     justify-content: space-around;
-    margin-bottom: 250px;
+    margin-bottom: 20%;
 }
 
 .logo{
@@ -76,15 +69,19 @@ img{
     max-height: 80px;
 }
 .line{
-    width: 79%;
-    margin: auto;
     display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    gap: 15px;
+    justify-content: space-around;
+    margin: 10% 33%;
 }
-.line hr{
-    margin: 10px;
+.line .small-line{
+    width: 20%;
+    height: 1px;
+    border: 1px solid white;
+}
+.line .big-line{
+    width: 60%;
+    height: 1px;
+    border: 1px solid white;
 }
 .icons{
     display: flex;
@@ -108,19 +105,16 @@ img{
 }
 @media screen and (max-width: 475px) {
     .mail{
-        visibility: hidden;
+        order: 2;
+        text-align: center;
+        margin-top: 15px;
     }
     .name{
         font-size: 65px;
     }
-    .position{
+    .job-position{
         margin-top: 15px;
         font-size: 35px;
-    }
-    .hid-mail{
-        display: block;
-        margin-top: 8px;
-        font-size: 20px;
     }
     .pic{
         width: 100%;
@@ -130,6 +124,7 @@ img{
     }
     .logolist{
         gap: 50px;
+        margin-bottom: 50%;
     }
     .logo{
         width: 30%;
