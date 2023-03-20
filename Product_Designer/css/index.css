@@ -10,6 +10,7 @@ body{
     text-align: center;
     padding: 0 10.5%;
 }
+/* header section  */
 header{
     display: flex;
     flex-direction: column;
@@ -37,6 +38,7 @@ img{
     letter-spacing: 2px;
     color: rgb(206, 206, 206);
 }
+/* pic list section */
 .piclist,.logolist{
     display: flex;
     flex-wrap: wrap;
@@ -57,6 +59,7 @@ img{
     font-size: 50px;
     font-weight: 700;
 }
+/* logolist section */
 .logolist{
     justify-content: space-around;
     margin-bottom: 20%;
@@ -68,6 +71,7 @@ img{
 .logo img{
     max-height: 80px;
 }
+/* line section */
 .line{
     display: flex;
     justify-content: space-around;
@@ -83,6 +87,7 @@ img{
     height: 1px;
     border: 1px solid white;
 }
+/* icon section */
 .icons{
     display: flex;
     font-size: 30px;
@@ -103,6 +108,7 @@ img{
     font-size: 23px;
     font-weight: 700;
 }
+/* responsive  */
 @media screen and (max-width: 475px) {
     .mail{
         order: 2;
