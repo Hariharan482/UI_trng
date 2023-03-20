@@ -13,11 +13,13 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 
 }
+
+/* main container  */
 .container{
     display: flex;
     justify-content: space-between;
-    position: relative;
 }
+/* iconbar  */
 .iconbar{
     position: relative;
     height: 90px;
@@ -34,6 +36,7 @@ body{
     margin: 33px 33px;
     font-size: 35px;
 }
+/* slider  */
 .list{
     width: 300px;
     position: relative;
@@ -69,6 +72,7 @@ li img:hover{
     transform: rotate(-15deg);
     transition: 2s ease;
 }
+/* product descrptn  */
 .prod-desc{
     display: flex;
     flex-direction: column;
@@ -85,6 +89,7 @@ li img:hover{
 .desc{
     font-size: 120px;
 }
+/* year section */
 .year{
     position: relative;
 }
@@ -97,6 +102,7 @@ li img:hover{
     font-size: 50px;
     font-weight: 700;
 }
+/* social icon section  */
 .iconlist{
     position: absolute;
     right: 0;
