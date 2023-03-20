@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 10%;
+    background-color: black;
+    padding-right: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 50px;
+    margin: 10%;
+}
+/* pacman  */
+.pacman{
+    position: absolute;
+    top : 53.5%;
+    left: 7.8%;
+    z-index: 1;
+}
+/* pacman top  */
+.top{
+    width: 100px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+    background-color: darkgoldenrod;
+    animation: topanimation 0.5s ease infinite;
+}   
+/* pacman bottom      */
+.bottom{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    top:-10px;
+    border-radius: 0 0 50px 50px;
+    background-color: darkgoldenrod;
+    animation: bottomanimation 0.5s ease infinite;
+}
+.path{
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+}
+/* food circle  */
+.food{
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: eatingpath 0.5s linear infinite;
+}
+/* top pacman animation */
+@keyframes topanimation{
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+}
+/* .bottom pacman animation */
+@keyframes bottomanimation{
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+}
+/* eating path  */
+@keyframes eatingpath{
+    0%{
+        transform: translate(70%);
+    }
+    100%{
+        transform: translate(-70%);
+    }
+}
