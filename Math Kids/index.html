@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <title>Math Kids</title>
+    </head>
+    <body>
+        <header>
+        <!-- nav bar -->
+        <div class="nav-bar">
+            <p>MATH KIDS</p>
+            <p>KIDS LEARNING APP</p>
+        </div>
+        </header>
+        <main>
+            <!-- shapeSection -->
+            <section class="shapeSection">
+                <p>1. Choose a Shape</p>
+                <div class="shape">
+                    <div class="Circle" id="Circle"></div>
+                    <div class="Triangle" id="Triangle"></div>
+                    <div class="Square" id="Square"> </div>
+                </div>
+                <button id="nextButton" class="button">NEXT</button>
+            </section>
+            <!-- input section  -->
+            <section class="calcSection">
+                <p id="descrptnText"></p>
+                <input type="number" class="textbox" id="numberValue" >
+                <button id="calculate" class="button">CALCULATE</button>
+            </section>
+            <!-- result section  -->
+            <section class="resultSection">
+                <div id="table-field" class="table-field"></div>
+                <button id="start-again" class="button">START AGAIN</button>
+            </section>
+        </main>
+        <script src="/index.js"></script>
+    </body>
+</html>
