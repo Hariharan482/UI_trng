@@ -1,9 +1,3 @@
-let sections=document.querySelectorAll("section");
-let buttons=document.querySelectorAll("button");
-let shapeTypes=document.querySelector(".shape").children;
-// console.log(shapeTypes);
-
-// localStorage.clear();
 //shape object
 let shapeObj={
     circle : {
@@ -63,12 +57,7 @@ let setPage=()=>{
     }
     return localStorage.getItem("sectionIndex");
 };
-let sectionIndex=setPage();
-sections[sectionIndex].style.display="flex";
 
-//storing p numberValue and textbox numberValue in session storage
-document.querySelector("#descrptnText").innerText=localStorage.getItem("ptext");
-document.querySelector("#numberValue").value=localStorage.getItem("textbox");
 
 //remvoing ticks inside shapes
 let removeTick=()=>{
@@ -116,10 +105,6 @@ let createTable=()=>{
     tableDiv.prepend(shapeDiagram);
 } 
 
-//restoring table after refreshing page
-if(localStorage.getItem("shape")){
-    createTable();
-}
 
 let checkEmpty=()=>{
     // console.log(document.querySelector("#numberValue").value);
@@ -129,57 +114,75 @@ let checkEmpty=()=>{
     }
     return true;
 }
-//changing display style of sections
-for (let button of buttons){
-    button.addEventListener("click",()=>{
-        if(sectionIndex==1 && !checkEmpty()){
-            window.alert("enter side/radius");
-            sectionIndex=1;
-        }
-        else{
-            sectionIndex=(++sectionIndex)%3;    
-        }
-        for(let section=0;section<sections.length;section++){
-            sections[section].style.display="none";
-        }
-        sections[sectionIndex].style.display="flex";
-        localStorage.setItem("sectionIndex",sectionIndex);
+
+function load(){
+
+    let sections=document.querySelectorAll("section");
+    let buttons=document.querySelectorAll("button");
+    let shapeTypes=document.querySelector(".shape").children;
+    let sectionIndex=setPage();
+    sections[sectionIndex].style.display="flex";
+
+    //storing p numberValue and textbox numberValue in session storage
+    document.querySelector("#descrptnText").innerText=localStorage.getItem("ptext");
+    document.querySelector("#numberValue").value=localStorage.getItem("textbox");
+    //restoring table after refreshing page
+    if(localStorage.getItem("shape")){
+        createTable();
+    }
+    //changing display style of sections
+    for (let button of buttons){
+        button.addEventListener("click",()=>{
+            if(sectionIndex==1 && !checkEmpty()){
+                window.alert("enter side/radius");
+                sectionIndex=1;
+            }
+            else{
+                sectionIndex=(++sectionIndex)%3;    
+            }
+            for(let section=0;section<sections.length;section++){
+                sections[section].style.display="none";
+            }
+            sections[sectionIndex].style.display="flex";
+            localStorage.setItem("sectionIndex",sectionIndex);
+        })
+    }
+    //storing textbox value
+    document.querySelector("#numberValue").addEventListener("keyup",()=>{
+        let keyvalue=document.querySelector("#numberValue").value;
+        localStorage.setItem("textbox",keyvalue);
     })
-}
 
-//storing textbox value
-document.querySelector("#numberValue").addEventListener("keyup",()=>{
-    let keyvalue=document.querySelector("#numberValue").value;
-    localStorage.setItem("textbox",keyvalue);
-})
+    //changing display style of tick nd button 
+    for(let shape of shapeTypes){
+        shape.addEventListener("click",(event)=>{
+            let className=event.target.className;
+            removeTick();
+            output="";
+            output+='<div class="tick">'
+            output+='<i class="fa-solid fa-check"></i>'
+            output+='</div>'
+            event.target.innerHTML=output;
+            document.querySelector("#nextButton").style.display="block";
+            let descrptnText=document.querySelector("#descrptnText");
+            descrptnText.innerText=shapeObj[className].textdata;
+            localStorage.setItem("shape",className);
+            // console.log(className);
+            localStorage.setItem("ptext",shapeObj[className].textdata);
+        })
+    }
 
-//changing display style of tick nd button 
-for(let shape of shapeTypes){
-    shape.addEventListener("click",(event)=>{
-        let className=event.target.className;
-        removeTick();
-        output="";
-        output+='<div class="tick">'
-        output+='<i class="fa-solid fa-check"></i>'
-        output+='</div>'
-        event.target.innerHTML=output;
-        document.querySelector("#nextButton").style.display="block";
-        let descrptnText=document.querySelector("#descrptnText");
-        descrptnText.innerText=shapeObj[className].textdata;
-        localStorage.setItem("shape",className);
-        // console.log(className);
-        localStorage.setItem("ptext",shapeObj[className].textdata);
+    //creating table after clicking calculate button
+    document.querySelector("#calculate").addEventListener("click",()=>{
+        if(checkEmpty()){
+        createTable();}
     })
+
+    document.querySelector("#startAgain").addEventListener("click",()=>{
+        document.querySelector("#nextButton").style.display="none";
+        document.querySelector("#numberValue").value="";
+        localStorage.clear();
+    })
+
 }
-
-//creating table after clicking calculate button
-document.querySelector("#calculate").addEventListener("click",()=>{
-    if(checkEmpty()){
-    createTable();}
-})
-
-document.querySelector("#startAgain").addEventListener("click",()=>{
-    document.querySelector("#nextButton").style.display="none";
-    document.querySelector("#numberValue").value="";
-    localStorage.clear();
-})
+load();
