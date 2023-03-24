@@ -51,19 +51,22 @@ section p{
     color: white;
     font-size: 60px;
 }
-.Triangle {
+.triangle {
     width: 150px;
     height: 150px;
     background-color: rgb(243, 174, 218);
     clip-path: polygon(50% 0,100% 100%,0 100%);
 }
-.Circle{
+.triangle .tick{
+    margin-top: 35px;
+}
+.circle{
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color:  rgb(67,150,126);
 }
-.Square{
+.square{
     width: 150px;
     height: 150px;
     background-color: rgb(224, 224, 224);
@@ -86,10 +89,10 @@ section p{
     font-size: 30px;
     text-align: center;
 }
-.textbox:focus{
+/* .textbox:focus{
     background-color: white;
     color: black;
-}
+} */
 .resultSection{
     padding-top: 10%;
     row-gap: 50px;
@@ -112,6 +115,10 @@ section p{
 .table-field > :last-child td:nth-child(2){
     background-color: rgb(74, 92, 123);
     width: 130px;
+    /* letter-spacing: 3px; */
+}  
+.table-field > :last-child td:nth-child(3){
+    background-color: rgb(75, 134, 247);
 }  
 .resultSection div > div{
     margin-bottom: 5%;

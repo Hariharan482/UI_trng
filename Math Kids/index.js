@@ -1,17 +1,19 @@
 let sections=document.querySelectorAll("section");
 let buttons=document.querySelectorAll("button");
 let shapechild=document.querySelector(".shape").children;
+// console.log(shapechild);
 
+// localStorage.clear();
 //shape object
 let shapeObj={
-    Circle : {
-        name : "Circle",
+    circle : {
+        name : "circle",
         resText : "Circle",
         textdata : "2. Enter Radius",
         tableData : {
             RADIUS : "π",
-            AREA : "πr &sup2;",
-            PERIMETER : "2*π*r"
+            AREA : "π r &sup2;",
+            PERIMETER : "2 * π * r"
         },
         area : (radius)=>{
             return Math.PI*radius*radius;
@@ -20,14 +22,14 @@ let shapeObj={
             return 2*Math.PI*radius;
         }
     },
-    Triangle : {
-        name : "Triangle",
+    triangle : {
+        name : "triangle",
         resText : "Equilateral Triangle",
         textdata : "2. Enter Side (Base & Height)",
         tableData : {
             SIDE : "s",
-            AREA : "0.433*s*s",
-            PERIMETER : "3*s"
+            AREA : "0.433 * s * s",
+            PERIMETER : "3 * s"
         },
         area : (side)=>{
             return 0.433*side*side;
@@ -36,14 +38,14 @@ let shapeObj={
             return 3*side;
         }
     },
-    Square : {
-        name : "Square",
+    square : {
+        name : "square",
         resText : "Square",
         textdata : "2. Enter Side",
         tableData :{
             SIDE : "s",
-            AREA : "s*s",
-            PERIMETER : "4*s"
+            AREA : "s * s",
+            PERIMETER : "4 * s"
         },
         area : (side)=>{
             return side*side;
@@ -56,17 +58,17 @@ let shapeObj={
 
 //storing section no in session storage
 let setPage=()=>{
-    if(sessionStorage.getItem("sectionIndex")==null){
-        sessionStorage.setItem("sectionIndex",0);
+    if(localStorage.getItem("sectionIndex")==null){
+        localStorage.setItem("sectionIndex",0);
     }
-    return sessionStorage.getItem("sectionIndex");
+    return localStorage.getItem("sectionIndex");
 };
 let sectionIndex=setPage();
 sections[sectionIndex].style.display="flex";
 
 //storing p numberValue and textbox numberValue in session storage
-document.querySelector("#descrptnText").innerText=sessionStorage.getItem("ptext");
-document.querySelector("#numberValue").value=sessionStorage.getItem("textbox");
+document.querySelector("#descrptnText").innerText=localStorage.getItem("ptext");
+document.querySelector("#numberValue").value=localStorage.getItem("textbox");
 
 //remvoing ticks inside shapes
 let removeTick=()=>{
@@ -90,11 +92,12 @@ let calc=(side,shapeType)=>{
 //create table
 let createTable=()=>{
     let tableDiv=document.querySelector("#table-field");
-    let textvalue=sessionStorage.getItem("textbox");
-    let shapedata=shapeObj[sessionStorage.shape];
+    let textvalue=localStorage.getItem("textbox");
+    let shapedata=shapeObj[localStorage.shape];
     let table="<table>";
+    console.log(textvalue,shapedata.name);
     let calcArr=calc(textvalue,shapedata.name);
-    // console.log(calcArr,textvalue,shapedata.name);
+    
     let arrIndex=0;
     for(let val in shapedata.tableData){
         table+="<tr>";
@@ -114,7 +117,7 @@ let createTable=()=>{
 } 
 
 //restoring table after refreshing page
-if(sessionStorage.getItem("shape")){
+if(localStorage.getItem("shape")){
     createTable();
 }
 
@@ -140,14 +143,14 @@ for (let button of buttons){
             sections[section].style.display="none";
         }
         sections[sectionIndex].style.display="flex";
-        sessionStorage.setItem("sectionIndex",sectionIndex);
+        localStorage.setItem("sectionIndex",sectionIndex);
     })
 }
 
 //storing textbox value
 document.querySelector("#numberValue").addEventListener("keyup",()=>{
     let keyvalue=document.querySelector("#numberValue").value;
-    sessionStorage.setItem("textbox",keyvalue);
+    localStorage.setItem("textbox",keyvalue);
 })
 
 //changing display style of tick nd button 
@@ -163,8 +166,9 @@ for(let shape of shapechild){
         document.querySelector("#nextButton").style.display="block";
         let descrptnText=document.querySelector("#descrptnText");
         descrptnText.innerText=shapeObj[className].textdata;
-        sessionStorage.setItem("shape",className);
-        sessionStorage.setItem("ptext",shapeObj[className].textdata);
+        localStorage.setItem("shape",className);
+        // console.log(className);
+        localStorage.setItem("ptext",shapeObj[className].textdata);
     })
 }
 
@@ -177,5 +181,5 @@ document.querySelector("#calculate").addEventListener("click",()=>{
 document.querySelector("#start-again").addEventListener("click",()=>{
     document.querySelector("#nextButton").style.display="none";
     document.querySelector("#numberValue").value="";
-    sessionStorage.clear();
+    localStorage.clear();
 })
