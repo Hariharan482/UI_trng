@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2a2b30;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.itemlist , .top{
+    width: 85%;
+    margin: 60px auto;
+    margin-bottom: 30px;
+}
+/* top section  */
+.top{
+    position: relative;
+}
+/* fashionz icon  */
+.img{
+    width: 170px;
+    height: 52px;
+}
+img{
+    max-width: 100%;
+}
+/* icon  */
+.icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 0px;  
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.icon:hover , .drop-item:hover{
+    background-color: #9e9e9e;
+}
+/* drop down menu  */
+.drop-down-menu{
+    display: none;
+    position: relative;
+    width: 250px;
+    height: 175px;
+    right: 0px;
+    top: 70px;
+    bottom: 10px;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 15px;
+    padding-bottom: 25px;
+}
+.iconbar:hover,.add2cart:hover{
+    cursor: pointer;
+}
+.iconbar:hover ul{
+    display: block;
+}
+.drop-down-menu li{
+    list-style : none;
+    padding: 9px;
+}
+.drop-down-menu li a{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+.iconbar{
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+/* clothes section */
+.items{
+    display: inline-block;
+    width: 23%;
+    margin-bottom: 70px;
+    line-height: 30px;
+}
+.items:not(:nth-of-type(4n+1)){
+    margin-left:2.395%; 
+}
+/* cloth section */
+.upper-section{
+    max-width: 100%;
+    height: 410px;
+    position: relative;
+    background-color: #24252a;
+}
+.star{
+    float: right;
+    height: 70px;
+    margin: 25px 25px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.star i{
+    color: #91b186;
+    cursor: pointer;
+}
+.clear{
+    clear: both;
+}
+/* cloth section img  */
+.imgsec{
+    max-width: 250px;
+    max-height: 250px;
+    display: block;
+    margin: auto;
+}
+.size{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom:-25px;
+    border-radius: 50px;
+    background-color: #91b186;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px;
+}
+.item-name{
+    margin-top: 18px;
+    font-size: 25px;
+    font-weight: 300;
+}
+.price{
+    font-size: 23px;
+    color: #9e9e9e;
+}
+.add2cart{
+    width: 150px;
+    margin-top: 10px;
+    border: 1px solid #9e9e9e;
+    padding: 10px;
+    color: #9e9e9e;
+    background-color: #2a2b30;
+    font-size: 16px;
+}
+.add2cart:hover{
+    background-color: #91b186;
+    color: #000000;
+}
+/* footer section */
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #000000;
+    font-size: 25px;
+}
+.footer ul li{
+    display: inline-block; 
+    padding: 35px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
