@@ -12,8 +12,8 @@ console.log(2=="2")
 //section 2
 
 //initialising array
-var team=['Kevin','Haaland','Foden','Ruben','Ilkay','Mahrez','Stones','Alvarez','Walker','Silva','Rodri'];
-// var j=0;
+let team=['Kevin','Haaland','Foden','Ruben','Ilkay','Mahrez','Stones','Alletez','Walker','Silva','Rodri'];
+// let j=0;
 // for(let i=11;i>=1;i--){
 //     team[j++]=`player${i}`;
 // }
@@ -40,7 +40,7 @@ for(let player of team){
 }
 
 //case conversion
-var updatedTeam=team.map( player => player.toUpperCase() );
+let updatedTeam=team.map( player => player.toUpperCase() );
 console.log(updatedTeam);
 
 //section 3
@@ -54,23 +54,24 @@ console.log(updatedTeam);
 
 //display date
 let date=new Date();
-let month=date.getMonth()+1;
+let month=date.getMonth()+1; 
+month=month.toString().padStart(2,"0");
 console.log(date.getDate()+"/"+ month+"/"+date.getFullYear());
 
 //celsius to fahrenheit conversion
-var celsiusToFahrenheit=(celsius)=>{
+let celsiusToFahrenheit=(celsius)=>{
     return celsius*(9/5)+32+" F";
 }
 console.log(celsiusToFahrenheit(32));
 
 //find avg 
-var avg=(arr)=>{
+let avg=(arr)=>{
     return arr.reduce((prev,curr)=>prev+=curr)/arr.length;
 }
 console.log(avg([1,2,3,4,5]));
 
 //reverse a string
-var reverseStr=(str)=>{
+let reverseStr=(str)=>{
     return str.split('').reverse().join("");
 }
 console.log(reverseStr("Hello"));

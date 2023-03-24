@@ -1,5 +1,5 @@
 //object
-var calculator={
+let calculator={
     //add funct
     add: ((a,b)=>{
         return (Number.isInteger(a)&&Number.isInteger(b))? a+b : "invalid" ;
