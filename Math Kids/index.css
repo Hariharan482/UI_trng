@@ -20,7 +20,7 @@ body{
     font-weight: 700;
     letter-spacing: 1.5;
 }
-.shapeSection,.calcSection,.resultSection{
+.shape-section,.calc-section,.result-section{
     padding-top: 13.5%;
     padding-left: 15%;
     padding-right: 15%;
@@ -28,7 +28,7 @@ body{
     align-items: center;
     row-gap: 90px;
 }
-.shapeSection,.calcSection,.resultSection,.shapeSection > .button{
+.shape-section,.calc-section,.result-section,.shape-section > .button{
     display: none;
 }
 section p{
@@ -93,7 +93,7 @@ section p{
     background-color: white;
     color: black;
 } */
-.resultSection{
+.result-section{
     padding-top: 10%;
     row-gap: 50px;
 }
@@ -114,7 +114,7 @@ section p{
 } 
 .table-field > :last-child td:nth-child(2){
     background-color: rgb(74, 92, 123);
-    width: 130px;
+    width: 150px;
     /* letter-spacing: 3px; */
 }  
 .table-field > :last-child td:nth-child(3){

@@ -1,7 +1,7 @@
 let sections=document.querySelectorAll("section");
 let buttons=document.querySelectorAll("button");
-let shapechild=document.querySelector(".shape").children;
-// console.log(shapechild);
+let shapeTypes=document.querySelector(".shape").children;
+// console.log(shapeTypes);
 
 // localStorage.clear();
 //shape object
@@ -107,13 +107,13 @@ let createTable=()=>{
         table+="</tr>";
     }
     tableDiv.innerHTML=table;
-    let shapediag=document.createElement("div");
-    shapediag.setAttribute("class",shapedata.name);
+    let shapeDiagram=document.createElement("div");
+    shapeDiagram.setAttribute("class",shapedata.name);
     removeTick();
     let p=document.createElement("p");
     p.innerHTML=shapedata.resText;
     tableDiv.prepend(p);
-    tableDiv.prepend(shapediag);
+    tableDiv.prepend(shapeDiagram);
 } 
 
 //restoring table after refreshing page
@@ -154,7 +154,7 @@ document.querySelector("#numberValue").addEventListener("keyup",()=>{
 })
 
 //changing display style of tick nd button 
-for(let shape of shapechild){
+for(let shape of shapeTypes){
     shape.addEventListener("click",(event)=>{
         let className=event.target.className;
         removeTick();
@@ -178,7 +178,7 @@ document.querySelector("#calculate").addEventListener("click",()=>{
     createTable();}
 })
 
-document.querySelector("#start-again").addEventListener("click",()=>{
+document.querySelector("#startAgain").addEventListener("click",()=>{
     document.querySelector("#nextButton").style.display="none";
     document.querySelector("#numberValue").value="";
     localStorage.clear();
