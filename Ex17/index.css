@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+}
+.logo img{
+    width: 350px;
+    object-fit: contain;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.section-tabs{
+    width: 580px;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 14px;
+}
+.tab{
+    width: 120px;
+    height: 35px;
+    font-size: 12px;   
+}
+.content-section{
+    width: 635px;
+    height: 565px;
+    overflow: auto;
+    background-color: #ffffff;
+    padding: 30px;
+}
+.tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 117px;
+    height: 37px;
+    background-color: black;
+    border-radius: 6px 6px 0px 0px;
+    color: #ffffff;
+}
+.active{
+    background-color: #001B71;
+    color: white;
+}
+.about-us-section{
+    display: none;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.about-us-section img{
+    width: 100%;
+}
+.solutions-section{
+    display: none;
+    flex-direction: column;
+    row-gap: 8px;
+    font-size: 13px;
+}
+.solutions-section div div{
+    border: 1px solid #808eb9;
+}
+#accordion h3{
+    background-color: #808eb9;
+    color:#eeeeee;
+}
+#accordion div{
+    height: 145px;
+}
+.locations-container{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.locations-section{
+    display: none;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.locations-container img{
+    width: 27px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.state,.city,.pno{
+    color: #000000d4;
+}
+.state{
+    width: 20%;
+}
+.city{
+    width: 31%;
+}
+.pno{
+    margin-right: 15px;
+}
+.grey-container{
+    background-color : #eeeeee;
+}
+.pink-container{
+    background-color: #eedaf5;
+}
+#accordion div{
+    border-radius: 0px;
+}
+#accordion h3{
+    letter-spacing: 1px;
+}
+.tab-display{
+    display: flex;
+}
