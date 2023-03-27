@@ -115,7 +115,7 @@ let checkEmpty=()=>{
     return true;
 }
 
-function load(){
+document.addEventListener("DOMContentLoaded", () => {
 
     let sections=document.querySelectorAll("section");
     let buttons=document.querySelectorAll("button");
@@ -184,5 +184,4 @@ function load(){
         localStorage.clear();
     })
 
-}
-load();
+});
