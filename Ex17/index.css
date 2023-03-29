@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif !important;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    width: 300px;
+    margin: auto;
+}
+
+.logo>img {
+    margin: 18px 0 10px 10px;
+    height: 100px;
+    width: 280px;
+    object-fit: cover;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 36.8%;
+    margin: auto;
+    margin-top: 30px;
+    border: none !important;
+    background: transparent;
+}
+
+.tab-options {
+    background-color: transparent;
+    border: none;
+    margin-left: 1.5em !important;
+}
+
+.tab-options .option {
+    background-color: #000000;
+    border: none;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    margin: 1px 0.8em 0 0 !important;
+}
+
+.tab-options li[aria-selected="true"] {
+    background-color: #001b71;
+    border: none;
+}
+
+.tab-options .option a {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 10px 24px !important;
+    margin-top: 3px;
+}
+
+.tab1,
+.tab2,
+.tab3 {
+    height: 555px;
+    box-shadow: 0px 0px 3px #808080;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 300;
+    padding: 1.7em 2em !important;
+}
+
+.tab1>.content {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1;
+}
+
+.conference-img {
+    width: 100%;
+    padding-top: 25px;
+}
+
+.tab2 .accordian-heading {
+    background-color: #818eb9;
+    font-family: "Noto Sans KR", sans-serif;
+    border: 1px solid #aab3d0;
+    color: #fff !important;
+    border-radius: 0;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    padding: 11px;
+}
+
+.tab2 .content {
+    font-family: "Lato", sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 1em 2.3em 1em 1.3em;
+    border: solid #808eb9 1px !important;
+    border-top: 0;
+    overflow: auto;
+}
+
+.ui-accordion .ui-accordion-header {
+    margin: 8px 0 -1px 0;
+}
+
+.ui-icon,
+.ui-widget-content .ui-icon {
+    background-image: url("http://code.jquery.com/ui/1.13.2/themes/base/images/ui-icons_ffffff_256x240.png") !important;
+}
+
+.tab3[aria-hidden="false"] {
+    display: flex !important;
+    flex-direction: column !important;
+    row-gap: 10px !important;
+    font-size: 12px;
+    overflow: auto;
+}
+
+.tab3 .locations-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.locations-container img{
+    width: 27px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.state,.city,.pno{
+    color: #000000d4;
+}
+.state{
+    width: 25%;
+}
+.city{
+    width: 25%;
+}
+.pno{
+    width: 25%;
+    margin-right: 15px;
+}
+.grey-container{
+    background-color : #eeeeee;
+}
+.pink-container{
+    background-color: #eedaf5;
+}
