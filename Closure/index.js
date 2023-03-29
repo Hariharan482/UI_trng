@@ -31,53 +31,45 @@ let bank = {
             Balance : 2500
         }
     ],
-    ATM : (CardNo,Pin,Amt)=>{
+
+    validate: (CardNo,Pin, TypeOfTrans, Amt) => {
+
+
+        let withDrawAmount = ()=>{
+            if(((account.Balance-Amt)>=0)){
+                account.Balance-=Amt;
+                console.log("Amount WithDrawn : "+Amt);
+                console.log("Account Balance : "+account.Balance);
+            }
+            else {
+                console.log("insufficient funds");
+            }
+        };
+
+        let depositAmount = ()=>{
+            account.Balance+= Number(Amt);
+            console.log("Amount Deposited : "+Amt);
+            console.log("Account Balance : "+account.Balance);
+        };
+
         for(account of bank.accounts){
-            if(account.Card_no == CardNo && account.PIN == Pin  ){
-                console.log(account.Balance);
-                if(((account.Balance-Amt)>=0)){
-                    account.Balance-=Amt;
-                    console.log("Amount WithDrawn : "+Amt);
-                    console.log("Account Balance : "+account.Balance);
+            if(account.Card_no == CardNo && account.PIN == Pin  ) {
+                if(TypeOfTrans == 'ATM') {
+                    return withDrawAmount;
                 }
                 else {
-                    console.log("insufficient funds");
+                    return depositAmount;
                 }
-                return true;
-            }    
+            }
         }
-        return false;
-        
-    },
 
-    CDM : (CardNo,Pin,Amt)=>{
 
-        for(account of bank.accounts){
-            if(account.Card_no == CardNo && account.PIN == Pin  ){
-                account.Balance+=Amt;
-                console.log("Amount Deposited : "+Amt);
-                console.log("Account Balance : "+account.Balance);
-                return true;
-            }    
-        }
-        return false;
+        return () => console.log("Error");
     },
+    
+
+ 
 }
 
-
-function transaction(CardNo,Pin,Amt,TypeOfTrans){
-    if(TypeOfTrans=="ATM") {
-        if(!bank.ATM(CardNo,Pin,Amt)){
-            console.log("invalid details");
-        }
-    }    
-    else if ( TypeOfTrans=="CDM" )
-    {
-        if(!bank.CDM(CardNo,Pin,Amt))
-            console.log("invalid details");
-    }   
-    else 
-        console.log("Enter valid transaction type");    
-}
-transaction(12345679,231,2001,"CDM");
-transaction(12345679,231,2001,"ATM");
+let caller = bank.validate(12345679,231,"ATM", 200);
+caller();
