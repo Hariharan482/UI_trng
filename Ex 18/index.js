@@ -1,11 +1,14 @@
 $(document).ready(function(){
-    let ajax=(url,funct)=>{
+    let ajax=(url,Containerfunct) =>{
         $.ajax(
             {
                 url : url,
                 success : function(res){
-                    funct(res);
+                    Containerfunct(res);
                 },
+                error : function(){
+                    console.log("invalid link");
+                }
             }
         )
     }
@@ -17,35 +20,26 @@ $(document).ready(function(){
         $video.attr("controls",true);
         $video.attr("poster","/images/Screenshot 2023-03-22 at 7.25.34 PM.png");
         videoSect.append($video);
-        let h2=$("<h2>");
-        h2.text(res.title);
+        let h2=$("<h2>").text(res.title);
         videoSect.after(h2);
-        let p=$("<p>");
-        p.attr("class","video-descrptn");
+        let p=$("<p>").attr("class","video-descrptn");
         p.text(res.description);
         h2.after(p);
         let hr=$("<hr>");
         p.after(hr);
-        let h3=$("<h3>");
-        h3.text("Comments");
+        let h3=$("<h3>").text("Comments");
         hr.after(h3);
 
         res.comments.forEach(comment => {
-            let card=$("<div>");
-            card.attr("class","card");
-            let cardimg=$("<div>");
-            cardimg.attr("class","cardimg");
-            let img=$("<img>");
-            img.attr("src",comment.image);
+            let card=$("<div>").attr("class","card");
+            let cardimg=$("<div>").attr("class","cardimg");
+            let img=$("<img>").attr("src",comment.image);
             cardimg.append(img);
-            let text=$("<div>");
-            text.attr('class','text');
-            let p=$("<p>");
+            let text=$("<div>").attr('class','text');
+            let p=$("<p>").attr("class","name");
             p.text(comment.name);
-            p.attr("class","name");
-            let p1=$("<p>");
+            let p1=$("<p>").attr("class","comment");
             p1.text(comment.comment);
-            p1.attr("class","comment");
             text.append(p);
             text.append(p1);
             card.append(cardimg);
