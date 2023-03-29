@@ -7,25 +7,28 @@ body{
     font-family: 'Open Sans', sans-serif;
     color: white;
 }
-.header{
+/* header section */
+.friends-section{
     top: 0;
     height: 10%;
     background-color: rgb(52, 33, 95);
     width: 100vw;
     position: fixed;
 }
-.header p{
+.friends-section p{
     font-size: 24px;
     padding: 30px;
     font-weight: 200;
     letter-spacing: 1.5px;
 }
+/* list section */
 .list{
     margin: 5%;
     margin-top: 10%;
     display: flex;
 }
-.row{
+/* card section */
+.friend-container{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -39,13 +42,15 @@ body{
     row-gap: 20px;
     column-gap: 10px;
     background-color: rgb(84, 101, 169);
-    align-items: center;
+    /* align-items: center; */
 }
+/* img section */
 .card .imgsect{
-    width: 94px;
-    height: 94px;
+    width: 74px;
+    height: 74px;
     border-radius: 50%;
     margin: 15px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 .imgsect img{
@@ -55,6 +60,7 @@ body{
 .card .text{
     display: flex;
     flex-direction: column;
+    margin-top: 25px ;
     /* justify-content: space-around; */
 }
 .name{

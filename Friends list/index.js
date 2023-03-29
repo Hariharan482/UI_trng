@@ -1,3 +1,4 @@
+// friends array
 var friendsarr=[
     {
 		"first_name": "Mehetabel",
@@ -6002,15 +6003,18 @@ var friendsarr=[
 ]
 
 // let output="";
+
 for(let friend of friendsarr){
+	//creating card
 	let card=document.createElement('div');
 	card.setAttribute('class','card');
+	// img section 
 	let imgsect=document.createElement('div');
 	imgsect.setAttribute('class','imgsect');
 	let img=document.createElement('img');
-
 	img.setAttribute('src',friend.img);
 	imgsect.append(img);
+	// text container 
 	let text=document.createElement('div');
 	text.setAttribute('class','text');
 	let name=document.createElement('p');
@@ -6023,6 +6027,7 @@ for(let friend of friendsarr){
 	text.append(email);
 	card.append(imgsect);
 	card.append(text);
-	document.querySelector(".row").append(card);
+	// appending card 
+	document.querySelector(".friend-container").append(card);
 }
 
