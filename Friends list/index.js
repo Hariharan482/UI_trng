@@ -6001,13 +6001,28 @@ var friendsarr=[
 	}
 ]
 
-let output="";
+// let output="";
 for(let friend of friendsarr){
-    output+='<div class="card">';
-    output+='<div class="imgsect">';
-    output+='<img src='+friend.img+'/></div>';
-    output+='<div class="text">';
-    output+='<p class="name">'+friend.first_name+" "+friend.last_name+'</p>';
-    output+='<p class="email">'+friend.email+'</p>'+'</div></div>';
+	let card=document.createElement('div');
+	card.setAttribute('class','card');
+	let imgsect=document.createElement('div');
+	imgsect.setAttribute('class','imgsect');
+	let img=document.createElement('img');
+
+	img.setAttribute('src',friend.img);
+	imgsect.append(img);
+	let text=document.createElement('div');
+	text.setAttribute('class','text');
+	let name=document.createElement('p');
+	name.setAttribute('class','name');
+	name.innerHTML=friend.first_name+" "+friend.last_name;
+	let email=document.createElement('p');
+	email.setAttribute('class','email');
+	email.innerHTML=friend.email;
+	text.append(name);
+	text.append(email);
+	card.append(imgsect);
+	card.append(text);
+	document.querySelector(".row").append(card);
 }
-document.querySelector(".row").innerHTML=output;
+
