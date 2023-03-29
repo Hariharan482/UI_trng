@@ -17,10 +17,13 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 20px;
 }
 .form-section label{
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: 500;
+}
+.form-section div h6{
     font-weight: 500;
 }
 .form-section h3{
@@ -36,6 +39,7 @@ form{
     display: flex;
     width: 50%;
     flex-direction: column;
+    row-gap: 3px;
 }
 input{
     border-radius: 5px;
