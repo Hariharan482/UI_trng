@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0 10.5%;
+}
+/* header section  */
+header{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+}
+.mail{
+    margin-top: 65px;
+    text-align: end;
+    font-size: 25px;
+}
+.name{
+    margin-top: 100px;
+    font-size: 150px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+.first-name{
+    font-weight: 300;
+}
+.job-position{
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: rgb(206, 206, 206);
+}
+/* pic list section */
+.piclist,.logolist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.piclist{
+    margin-top: 130px;
+}
+.pic{
+    width: 30%;
+    margin: 20px;
+}
+.descrptn{
+    color: rgb(206, 206, 206);
+    margin-top: 120px;
+    margin-bottom: 80px;
+    font-size: 50px;
+    font-weight: 700;
+}
+/* logolist section */
+.logolist{
+    justify-content: space-around;
+    margin-bottom: 20%;
+}
+
+.logo{
+    width: 10%;
+}
+.logo img{
+    max-height: 80px;
+}
+/* line section */
+.line{
+    display: flex;
+    justify-content: space-around;
+    margin: 10% 33%;
+}
+.line .small-line{
+    width: 20%;
+    height: 1px;
+    border: 1px solid white;
+}
+.line .big-line{
+    width: 60%;
+    height: 1px;
+    border: 1px solid white;
+}
+/* icon section */
+.icons{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 100px;
+}
+.icons i{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white ;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+}
+.passion{
+    margin-bottom: 100px;
+    font-size: 23px;
+    font-weight: 700;
+}
+/* responsive  */
+@media screen and (max-width: 475px) {
+    .mail{
+        order: 2;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .name{
+        font-size: 65px;
+    }
+    .job-position{
+        margin-top: 15px;
+        font-size: 35px;
+    }
+    .pic{
+        width: 100%;
+    }
+    .descrptn{
+        font-size: 35px;
+    }
+    .logolist{
+        gap: 50px;
+        margin-bottom: 50%;
+    }
+    .logo{
+        width: 30%;
+    }
+}
