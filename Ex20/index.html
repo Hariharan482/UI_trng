@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POCKET NOTES</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"  href="/assets/css/index.css"/>
+</head>
+<body>
+    <header class="nav-bar">
+        <div class="nav-left">
+            <div class="back-button"><i class="fa-sharp fa-solid fa-arrow-left"></i></div>
+            <p class="header-text">Pocket <span>Notes</span></p>
+        </div>
+        <div class="nav-right">
+            <button class="delete-all">DELETE ALL</button>
+            <button class="new">NEW</button>
+        </div>
+    </header>
+    <main>
+        <section class="notes-list"></section>
+        <section class="empty-list">
+            <div class="threedbox">
+                <img src="/assets/3dBox.png"/>
+            </div>
+            <p>Notes you add appear here</p>
+        </section>
+        <section class="right-float">
+            <div class="add-container">
+                <div class="add-top">
+                    <div class="add-head">
+                        <h3>NEW NOTE</h3>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    <input type="text" class="title" placeholder="Notes Title"/>
+                    <input type="text" class="url" placeholder="Add Image URL"/>
+                    <textarea class="content" placeholder="Add Content Here"></textarea>
+                    <div class="add-footer">
+                        <div class="colordiv">
+                            <div class="pink"></div>
+                            <div class="white"></div>
+                            <div class="yellow"></div>
+                            <div class="green"></div>
+                            <div class="orange"></div>
+                        </div>
+                        <button class="add">ADD</button>
+                    </div>    
+                </div>
+            </div>    
+        </section>
+        <section class="popup-sect">
+            <div class="popup-box">
+                <div class="popup-head">
+                    <h3></h3>
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <p></p>
+                <button class="del-confr"></button>
+            </div>
+        </section>
+        <section class="display-card"></section>
+        <div class="load-more-class">
+            <button class="load-more">LOAD MORE</button>
+        </div>    
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/assets/scripts/index.js"></script>
+</body>
+</html>
