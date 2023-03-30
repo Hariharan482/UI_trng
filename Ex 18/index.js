@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
     let ajax=(url,Containerfunct) =>{
         $.ajax(
             {
