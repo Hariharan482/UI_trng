@@ -32,13 +32,13 @@ function validate()
         if(inputField.value.trim()==""){
             // console.log(inputChildren[input);
             inputField.style.borderColor="#A80000";
-            h6Children[input].innerHTML=emptyErrMsg[input].innerText+" is required";
+            h6Children[input].innerHTML=`${emptyErrMsg[input].innerText} is required`;
             h6Children[input].style.color="#A80000";
             valid=false;
         }
-        else if((regex[inputField.id]).test(inputField.value)==false){
+        else if(!(regex[inputField.id]).test(inputField.value)){
             inputField.style.borderColor="#A80000";
-            h6Children[input].innerHTML=emptyErrMsg[input].innerText+" is not valid";
+            h6Children[input].innerHTML=`${emptyErrMsg[input].innerText} is not valid`;
             h6Children[input].style.color="#A80000";
             valid=false;
         }
@@ -49,7 +49,7 @@ function validate()
 
         if( (input == 6) && (inputField.value<2023) && (inputField.value!=0)){
             inputField.style.borderColor="#A80000";
-            h6Children[input].innerHTML=emptyErrMsg[input].innerText+" is not valid";
+            h6Children[input].innerHTML=`${emptyErrMsg[input].innerText} is not valid`;
             h6Children[input].style.color="#A80000";
             valid=false;
         }
