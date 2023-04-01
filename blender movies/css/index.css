@@ -23,6 +23,10 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+.nav-bar h1{
+    font-size: 18px;
+    font-weight: 500;
+}
 /* .imag-container{
     width: 400px;
     height: 600px;
@@ -38,13 +42,13 @@ img{
     column-gap: 10px;
 }
 .profile-pic{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     overflow: hidden;
 }
 .profile p{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 300;
 }
 main{
@@ -67,7 +71,7 @@ main{
     row-gap: 20px;
 }
 .left-container h2{
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 500;
 }
 .video-descrptn{
@@ -80,6 +84,7 @@ main{
 video{
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 .right-container{
     width: 23.5%;
@@ -111,7 +116,11 @@ video{
 }
 .name{
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
+}
+.comments{
+    font-size: 18px;
+    font-weight: 600;
 }
 .comment{
     font-size: 11.5px;
@@ -126,11 +135,17 @@ footer{
     top: 20px;
     bottom: 0;
 }
-.footertext{
+.footer-text p{
+    font-size: 14px;
+}
+.footer-text{
     display: flex;
     justify-content: space-between;
     width: 69.5%;
     margin: 0px auto;
+}
+.right-container h3{
+    font-weight: 500;
 }
 .footer-icon{
     position: fixed;
@@ -159,11 +174,11 @@ footer{
     .nav-bar{
         width: 90%;
     }
-    .footertext{
+    .footer-text{
         flex-direction: column;
         align-items: center;
     }
-    .footertext :nth-child(2){
+    .footer-text :nth-child(2){
         font-size: 23px;
     }
     .hr-tag{
